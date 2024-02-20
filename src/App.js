@@ -1,3 +1,4 @@
+/*
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
@@ -35,5 +36,23 @@ function App() {
     </div>
   );
 }
+
+export default App;
+*/
+import React, { useState } from "react";
+import DataComponent from "./DataComponent";
+import Dashboard from "./Dashboard";
+import Newsapp from "./Newsapp";
+import Navbar from "./Components/Navbar";
+import NewsBoard from "./Components/NewsBoard";
+const App = () => {
+  const [category, setCategory] = useState("general");
+  return (
+    <div>
+      <Navbar setCategory={setCategory} />
+      <NewsBoard category={category} />
+    </div>
+  );
+};
 
 export default App;
